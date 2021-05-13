@@ -42,7 +42,7 @@ passport.use(new OAuth2Strategy({
     },
     async function (accessToken, refreshToken, profile, cb) {
         const response = await new Promise(resolve => {
-            request.post(`http://quavergame.com/oauth2/me`, {
+            request.post(`https://quavergame.com/oauth2/me`, {
                 headers: {
                     "Authorization": "Bearer " + secretKey
                 },
